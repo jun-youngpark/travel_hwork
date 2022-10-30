@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url:  jdbc:mariadb://localhost:3306/travel
+    username: travel
+    password: travel
+    driverClassName: org.mariadb.jdbc.Driver
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+      show_sql: false
+      format_sql: false
+      use_sql_comments: false
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+
+
+print:
+  tripleCity:
+    count: 10
+
